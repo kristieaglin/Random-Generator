@@ -1,0 +1,38 @@
+:root{
+    --white: #FFFFFF
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*              NAV             */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 35px;
+    background-color: rgb(255, 171, 185);
+}
+
+nav p{
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+nav button{
+    background-color: rgb(167, 210, 248);
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 0 30px;
+    border-radius: 35px;
+}
+
+/*              MAIN                */
+
