@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 :root{
     --white: #FFFFFF
 
@@ -15,16 +17,62 @@ nav{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 10px 35px;
-    background-color: rgb(255, 171, 185);
+    padding: 5px 35px;
+    background-color: dimgrey;
 }
 
 nav p{
     color: white;
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 35px;
+    letter-spacing: 2px;
 }
 
-
+#pick-show-button{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    background-color: dimgray;
+    color: white;
+    border: solid 1px white;
+    padding: 0 25px;
+    
+}
 /*              MAIN                */
 
+main{
+    display: flex;
+    justify-content: center;
+}
+
+#image-con{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+#image-con img{
+    width: 100%;
+    height: ;
+    
+}
+
+.info-con{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    padding: 10px 45px;
+}
+
+.info-con h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 38px;
+    letter-spacing: 1px;
+}
+
+.info-con p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    
+}
