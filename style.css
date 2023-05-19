@@ -36,7 +36,7 @@ nav p{
     color: white;
     border: solid 1px white;
     padding: 0 25px;
-    
+    cursor: pointer;
 }
 /*              MAIN                */
 
@@ -47,14 +47,12 @@ main{
 
 #image-con{
     width: 50%;
-    display: flex;
-    justify-content: center;
 }
 
 #image-con img{
     width: 100%;
-    height: ;
-    
+    height: 100vh;
+    object-fit: fill;
 }
 
 .info-con{
