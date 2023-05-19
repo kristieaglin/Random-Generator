@@ -3,14 +3,15 @@ import { getTvShowData } from "./tv-show-data.js";
 import { getSeasonsData } from "./seasons-data.js";
 
 
-const showPicContaioner = document.querySelector("#image-con img");
+const showPicContainer = document.querySelector("#image-con img");
 const showName = document.getElementById("show-name");
 const runtime = document.getElementById("runtime");
 const genre = document.getElementById("genre");
 const seasons = document.getElementById("seasons");
 const network = document.getElementById("network");
-const summary = document.getElementById("summary");
 const rating = document.getElementById("rating");
+const summary = document.getElementById("summary");
+const watchNowContainer = document.getElementById("watch-now")
 const pickShowButton = document.getElementById("pick-show-button");
 
 
@@ -26,7 +27,9 @@ function populateShowInfo(tvShow, season){
 
 function createShowDescription(tvShow, season){
     const showPic = tvShow.image.original;
-    showPicContaioner.setAttribute("src", showPic);
+    showPicContainer.setAttribute("src", showPic);
+    const watchNow = tvShow.officialSite;
+    watchNowContainer.setAttribute("href", watchNow);
     populateShowInfo(tvShow, season);
 }
 
