@@ -1,6 +1,7 @@
 import { elementHTML } from "./utilities.js";
 import { getTvShowData } from "./tv-show-data.js";
 import { getSeasonsData } from "./seasons-data.js";
+import { displayCatagory } from "./catagory-display.js";
 
 
 const showPicContainer = document.querySelector("#image-con img");
@@ -17,12 +18,12 @@ const pickShowButton = document.getElementById("pick-show-button");
 
 function populateShowInfo(tvShow, season){
     elementHTML(showName, tvShow.name);
-    elementHTML(runtime, `<b>Runtime:</b> ${tvShow.averageRuntime} minutes`);
-    elementHTML(genre, `<b>Genre:</b> ${tvShow.genres.join(", ")}`);
-    elementHTML(seasons, `<b>Seasons:</b> ${season}`)
-    elementHTML(network, `<b>Network:</b> ${tvShow.network.name}`);
-    elementHTML(rating, `<b>Rating:</b> ${tvShow.rating.average}`);
-    elementHTML(summary, tvShow.summary);
+    elementHTML(runtime, `<b>Runtime:</b> <span class="catagory">${tvShow.averageRuntime} minutes</span>`);
+    elementHTML(genre, `<b>Genre:</b> <span class="catagory">${tvShow.genres.join(", ")}</span>`);
+    elementHTML(seasons, `<b>Seasons:</b> <span class="catagory">${season}</span>`)
+    elementHTML(network, `<b>Network:</b> <span class="catagory">${tvShow.network.name}</span>`);
+    elementHTML(rating, `<b>Rating:</b> <span class="catagory">${tvShow.rating.average}</span>`);
+    elementHTML(summary, `<span class="catagory">${tvShow.summary}</span>`);
 }
 
 function createShowDescription(tvShow, season){
@@ -31,6 +32,7 @@ function createShowDescription(tvShow, season){
     const watchNow = tvShow.officialSite;
     watchNowContainer.setAttribute("href", watchNow);
     populateShowInfo(tvShow, season);
+    displayCatagory();
 }
 
 async function getTvShow(){
