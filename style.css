@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Poppins:wght@400;700&display=swap');
 
 :root{
     --white: #FFFFFF
@@ -23,10 +23,10 @@ nav{
 
 nav p{
     color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Pangolin', cursive;
     font-weight: bold;
-    font-size: 35px;
-    letter-spacing: 2px;
+    font-size: 45px;
+    letter-spacing: 10px;
 }
 
 #pick-show-button{
@@ -39,7 +39,6 @@ nav p{
     border: solid 1px white;
     padding: 0 25px;
     cursor: pointer;
-    
 }
 
 #pick-show-button:hover{
@@ -56,21 +55,21 @@ main{
 }
 
 #image-con{
-    width: 50%;
+    width: 40%;
 }
 
 #image-con img{
-    width: 100%;
-    height: auto;
-    object-fit: fill;
+    width: auto;
+    height: 100vh;
 }
 
 .info-con{
-    width: 50%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     row-gap: 15px;
-    padding: 10px 45px;
+    padding: 20px 45px;
+    background-color: white;
 }
 
 .info-con h2{
@@ -82,7 +81,6 @@ main{
 .info-con p{
     font-family: 'Poppins', sans-serif;
     font-size: 26px;
-    
 }
 
 #watch-now{
@@ -105,4 +103,34 @@ main{
     letter-spacing: 3px;
     width: 350px;
     border: none;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    nav{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 0;
+    }
+
+    main{
+        flex-direction: column;
+    }
+
+    #image-con{
+        width: 100%;
+    }
+
+    #image-con img{
+        width: 100%;
+        height: auto;
+    }
+
+    .info-con{
+        width: 100%;
+        padding: 45px;
+    }
+
 }
