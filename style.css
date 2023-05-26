@@ -19,6 +19,8 @@ nav{
     width: 100%;
     padding: 5px 35px;
     background-color: dimgrey;
+    position: fixed;
+    z-index: 3;
 }
 
 nav p{
@@ -56,20 +58,27 @@ main{
 
 #image-con{
     width: 40%;
+    margin-top: 65px;
 }
 
 #image-con img{
     width: auto;
-    height: 100vh;
+    height: 93%;
+    position: fixed;
+    z-index: 0;
 }
 
 .info-con{
     width: 60%;
+    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     row-gap: 15px;
     padding: 20px 45px;
     background-color: white;
+    margin-top: 65px;
+    z-index: 2;
 }
 
 .info-con h2{
@@ -126,11 +135,16 @@ main{
     #image-con img{
         width: 100%;
         height: auto;
+        position: relative;
+        margin-top: 60px;
     }
 
     .info-con{
         width: 100%;
+        height: auto;
+        min-height: auto;
         padding: 45px;
+        margin-top: 0;
     }
 
 }
